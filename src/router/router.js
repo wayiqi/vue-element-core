@@ -80,7 +80,7 @@ export const asyncRouterMap = [
           {
             path: 'https://www.baidu.com',
             name: 'outIndex',
-            meta: { title: '测试页（外部）', icon: 'dashboard', permissionCode: 'outpath:outIndex' }
+            meta: { title: '外链（百度）', icon: 'dashboard', permissionCode: 'outpath:outIndex' }
           }
         ]
       },
@@ -104,6 +104,12 @@ export const asyncRouterMap = [
             name: 'watermark',
             component: () => import(/* webpackChunkName: "fail" */ '@/views/components/WaterMark.vue'),
             meta: { title: '水印', permissionCode: 'components:watermark' }
+          },
+          {
+            path: '/components/log',
+            name: 'log',
+            component: () => import(/* webpackChunkName: "fail" */ '@/views/components/Log.vue'),
+            meta: { title: 'log输出', permissionCode: 'components:log' }
           }
         ]
       },
